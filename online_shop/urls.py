@@ -1,0 +1,12 @@
+
+from django.urls import path
+from .views import(
+    OrderView
+)
+
+urlpatterns = [
+    path('order/', OrderView.as_view(), name ='order'),
+    path('order/<int:pk>', OrderView.as_view(), name ='order-delete'),
+    
+    
+]
